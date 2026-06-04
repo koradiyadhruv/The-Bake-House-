@@ -1,0 +1,1155 @@
+<!DOCTYPE html>
+<html lang="gu">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="The Bake House - Online cake, pastry & cafe ordering. Mota Varachha, Surat. Home delivery available. 4.8/5 rated.">
+  <meta name="keywords" content="order cake online Surat, bakery delivery, custom cakes, pastry shop near me">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="The Bake House Team">
+  <meta name="theme-color" content="#4A2C2A">
+  <title>THE BAKE HOUSE | Order Cakes, Pastries & Cafe Online - Surat</title>
+  
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Noto+Sans+Gujarati:wght@400;600;700&display=swap" as="style">
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Bakery",
+    "name": "The Bake House",
+    "image": "https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=800&auto=format&fit=crop&q=60",
+    "url": "https://thebakehousesurat.in",
+    "telephone": "+918160585664",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "9,10, Opera Business Hub, Mota Varachha",
+      "addressLocality": "Surat",
+      "postalCode": "394101",
+      "addressCountry": "IN"
+    },
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+      "opens": "09:00",
+      "closes": "23:30"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.8",
+      "reviewCount": "80"
+    }
+  }
+  </script>
+
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Noto+Sans+Gujarati:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  
+  <style>
+    :root {
+      --primary: #4A2C2A;
+      --accent: #D4A373;
+      --success: #27AE60;
+      --danger: #E74C3C;
+      --light-bg: #FAF6F0;
+      --light: #F5EBE0;
+      --white: #fff;
+      --shadow: 0 2px 12px rgba(0,0,0,0.08);
+      --shadow-lg: 0 8px 30px rgba(0,0,0,0.12);
+      --transition: 0.3s ease;
+      --font: 'Montserrat', 'Noto Sans Gujarati', sans-serif;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--font); background: var(--light-bg); color: #333; line-height: 1.6; }
+    
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 15px; }
+
+    /* FIXED: Header Sticky Issue */
+    header {
+      background: linear-gradient(135deg, var(--primary) 0%, #2A1412 100%);
+      color: var(--white);
+      padding: 12px 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: var(--shadow-lg);
+    }
+
+    header .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: 800;
+      letter-spacing: 1px;
+      flex-shrink: 0;
+    }
+
+    .header-right {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+      flex-shrink: 0;
+    }
+
+    .cart-badge {
+      position: relative;
+      cursor: pointer;
+      font-size: 1.3rem;
+      transition: var(--transition);
+    }
+
+    .cart-badge:hover {
+      transform: scale(1.1);
+    }
+
+    .cart-count {
+      position: absolute;
+      top: -8px;
+      right: -8px;
+      background: var(--danger);
+      color: var(--white);
+      border-radius: 50%;
+      width: 22px;
+      height: 22px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.7rem;
+      font-weight: bold;
+    }
+
+    .hamburger {
+display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      color: var(--white);
+      font-size: 1.5rem;
+      padding: 5px;
+    }
+
+    nav {
+      display: flex;
+      gap: 25px;
+      flex-wrap: nowrap;
+    }
+
+    nav a {
+      color: var(--white);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.9rem;
+      transition: var(--transition);
+      padding: 5px 0;
+      border-bottom: 2px solid transparent;
+      white-space: nowrap;
+    }
+
+    nav a:hover, nav a.active {
+      border-bottom-color: var(--accent);
+    }
+
+    /* Hero Section */
+    .hero {
+      background: linear-gradient(135deg, var(--primary) 0%, #2A1412 100%);
+      color: var(--white);
+      padding: 80px 0;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 2.5rem;
+      color: var(--accent);
+      margin-bottom: 10px;
+      line-height: 1.2;
+    }
+
+    .hero p {
+      font-size: 1.1rem;
+      margin-bottom: 30px;
+      opacity: 0.95;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--accent);
+      color: var(--primary);
+      padding: 12px 30px;
+      border-radius: 25px;
+      text-decoration: none;
+      font-weight: 700;
+      border: 2px solid var(--accent);
+      cursor: pointer;
+      transition: var(--transition);
+      margin: 5px;
+    }
+
+    .btn:hover {
+      background: var(--white);
+      transform: translateY(-2px);
+      box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+    }
+
+    .btn-secondary {
+      background: transparent;
+      color: var(--white);
+      border-color: var(--white);
+    }
+
+    .btn-secondary:hover {
+      background: var(--white);
+      color: var(--primary);
+    }
+
+    .btn-success {
+      background: var(--success);
+      color: var(--white);
+      border-color: var(--success);
+    }
+
+    .btn-success:hover {
+      background: #229954;
+    }
+
+    /* FIXED: Search Bar Z-index */
+    .search-bar {
+      background: var(--white);
+      padding: 25px;
+      border-radius: 15px;
+      box-shadow: var(--shadow);
+      margin: -40px 15px 40px 15px;
+      position: relative;
+      z-index: 10;
+    }
+
+    .search-bar input {
+      width: 100%;
+      padding: 12px 20px;
+      border: 2px solid var(--light);
+      border-radius: 25px;
+      font-size: 1rem;
+      font-family: var(--font);
+      transition: var(--transition);
+    }
+
+    .search-bar input:focus {
+outline: none;
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px rgba(212, 163, 115, 0.1);
+    }
+
+    /* Category Filter */
+    .category-filter {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 30px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .category-btn {
+      background: var(--light);
+      color: var(--primary);
+      border: 2px solid var(--light);
+      padding: 10px 20px;
+      border-radius: 20px;
+      cursor: pointer;
+      font-weight: 600;
+      transition: var(--transition);
+    }
+
+    .category-btn:hover, .category-btn.active {
+      background: var(--primary);
+      color: var(--white);
+      border-color: var(--primary);
+    }
+
+    /* Menu Grid - FIXED */
+    .menu-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 25px;
+      margin: 40px 0;
+    }
+
+    .menu-card {
+      background: var(--white);
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      transition: var(--transition);
+      transform: translateY(0);
+    }
+
+    .menu-card:hover {
+      transform: translateY(-8px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .menu-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .menu-card-body {
+      padding: 20px;
+    }
+
+    .menu-card h3 {
+      font-size: 1.1rem;
+      margin-bottom: 8px;
+      color: var(--primary);
+    }
+
+    .menu-card p {
+      font-size: 0.9rem;
+      color: #666;
+      margin-bottom: 12px;
+      min-height: 40px;
+    }
+
+    .menu-card-price {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 15px;
+    }
+
+    .price {
+      font-size: 1.3rem;
+      font-weight: 800;
+      color: var(--accent);
+    }
+
+    .menu-card-actions {
+      display: flex;
+      gap: 10px;
+    }
+
+    .qty-selector {
+      display: flex;
+      align-items: center;
+border: 2px solid var(--light);
+      border-radius: 8px;
+      width: 100px;
+    }
+
+    .qty-selector button {
+      background: none;
+      border: none;
+      padding: 5px 10px;
+      cursor: pointer;
+      color: var(--primary);
+      font-weight: bold;
+    }
+
+    .qty-selector input {
+      flex: 1;
+      text-align: center;
+      border: none;
+      font-weight: bold;
+      width: 40px;
+    }
+
+    .add-to-cart-btn {
+      flex: 1;
+      background: var(--success);
+      color: var(--white);
+      border: none;
+      padding: 8px 15px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: 600;
+      transition: var(--transition);
+    }
+
+    .add-to-cart-btn:hover {
+      background: #229954;
+    }
+
+    /* FIXED: Cart Sidebar Mobile */
+    .cart-sidebar {
+      position: fixed;
+      right: -400px;
+      top: 0;
+      width: 400px;
+      height: 100vh;
+      background: var(--white);
+      box-shadow: -2px 0 20px rgba(0,0,0,0.15);
+      z-index: 200;
+      transition: right 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      overflow-y: auto;
+    }
+
+    .cart-sidebar.active {
+      right: 0;
+    }
+
+    .cart-header {
+      background: linear-gradient(135deg, var(--primary) 0%, #2A1412 100%);
+      color: var(--white);
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 1.2rem;
+      font-weight: bold;
+      flex-shrink: 0;
+    }
+
+    .close-cart {
+      background: none;
+      border: none;
+color: var(--white);
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+
+    .cart-items {
+      flex: 1;
+      padding: 20px;
+      overflow-y: auto;
+    }
+
+    .cart-item {
+      display: flex;
+      gap: 12px;
+      margin-bottom: 15px;
+      padding-bottom: 15px;
+      border-bottom: 1px solid var(--light);
+    }
+
+    .cart-item-image {
+      width: 60px;
+      height: 60px;
+      border-radius: 8px;
+      object-fit: cover;
+      flex-shrink: 0;
+    }
+
+    .cart-item-info {
+      flex: 1;
+    }
+
+    .cart-item-name {
+      font-weight: 700;
+      color: var(--primary);
+      font-size: 0.95rem;
+    }
+
+    .cart-item-price {
+      color: var(--accent);
+      font-weight: bold;
+    }
+
+    .cart-empty {
+      text-align: center;
+      padding: 40px 20px;
+      color: #999;
+    }
+
+    .cart-footer {
+      padding: 20px;
+      border-top: 2px solid var(--light);
+      background: var(--light-bg);
+      flex-shrink: 0;
+    }
+
+    .cart-total {
+      display: flex;
+      justify-content: space-between;
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: var(--primary);
+      margin-bottom: 15px;
+    }
+
+    .checkout-btn {
+      width: 100%;
+      padding: 15px;
+      background: var(--success);
+      color: var(--white);
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-weight: bold;
+cursor: pointer;
+      transition: var(--transition);
+    }
+
+    .checkout-btn:hover {
+      background: #229954;
+    }
+
+    /* Modal - FIXED */
+    .modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.5);
+      z-index: 300;
+      justify-content: center;
+      align-items: center;
+      overflow-y: auto;
+    }
+
+    .modal.active {
+      display: flex;
+    }
+
+    .modal-content {
+      background: var(--white);
+      padding: 30px;
+      border-radius: 15px;
+      max-width: 500px;
+      width: 90%;
+      max-height: 90vh;
+      overflow-y: auto;
+      margin: auto;
+    }
+
+    .modal-header {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: var(--primary);
+      margin-bottom: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .modal-close {
+      background: none;
+      border: none;
+      font-size: 1.5rem;
+      cursor: pointer;
+      color: #999;
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 600;
+      color: var(--primary);
+    }
+
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+width: 100%;
+      padding: 10px;
+      border: 2px solid var(--light);
+      border-radius: 8px;
+      font-family: var(--font);
+      font-size: 1rem;
+      transition: var(--transition);
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus,
+    .form-group select:focus {
+      outline: none;
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px rgba(212, 163, 115, 0.1);
+    }
+
+    /* Section */
+    .section {
+      padding: 50px 0;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 2rem;
+      color: var(--primary);
+      margin-bottom: 40px;
+    }
+
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 25px;
+      margin: 40px 0;
+    }
+
+    .feature-card {
+      text-align: center;
+      padding: 25px;
+      background: var(--white);
+      border-radius: 15px;
+      box-shadow: var(--shadow);
+    }
+
+    .feature-icon {
+      font-size: 2.5rem;
+      color: var(--accent);
+      margin-bottom: 15px;
+    }
+
+    /* Footer */
+    footer {
+      background: linear-gradient(135deg, var(--primary) 0%, #2A1412 100%);
+      color: var(--white);
+      padding: 40px 0 20px 0;
+      text-align: center;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+    }
+
+    .footer-links a {
+      color: var(--white);
+      text-decoration: none;
+      transition: var(--transition);
+    }
+
+    .footer-links a:hover {
+      color: var(--accent);
+    }
+
+    /* Notification */
+    .notification {
+      position: fixed;
+      top: 80px;
+      right: 20px;
+      background: var(--success);
+      color: var(--white);
+      padding: 15px 20px;
+      border-radius: 8px;
+      box-shadow: var(--shadow-lg);
+      z-index: 400;
+      animation: slideIn 0.3s ease;
+    }
+
+    @keyframes slideIn {
+      from {
+        transform: translateX(400px);
+        opacity: 0;
+      }
+      to {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+
+    /* Responsive - FIXED */
+    @media (max-width: 768px) {
+      .logo { font-size: 1.2rem; }
+      .header-right { gap: 10px; }
+      nav { display: none; gap: 15px; }
+      nav a { font-size: 0.8rem; }
+      
+      .hero h1 { font-size: 1.8rem; }
+      .hero p { font-size: 1rem; }
+      
+      .menu-grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 15px;
+      }
+
+      .cart-sidebar {
+        width: 100%;
+        right: -100%;
+      }
+
+      .hamburger {
+        display: block;
+      }
+
+      nav.mobile-open {
+        display: flex;
+        position: fixed;
+        left: 0;
+        top: 60px;
+        width: 100%;
+        flex-direction: column;
+        background: var(--primary);
+        padding: 20px;
+        z-index: 99;
+      }
+
+.search-bar {
+        margin: -40px 10px 40px 10px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .logo { font-size: 1rem; }
+      .hero h1 { font-size: 1.5rem; }
+      .btn { padding: 10px 20px; font-size: 0.9rem; }
+      .menu-grid { grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <div class="logo">🍰 THE BAKE HOUSE</div>
+      <button class="hamburger" aria-label="Menu" onclick="toggleMobileMenu()"><i class="fas fa-bars"></i></button>
+      <nav id="nav">
+        <a href="#home">હોમ</a>
+        <a href="#menu">મેનુ</a>
+        <a href="#about">અમારા વિશે</a>
+        <a href="#contact">સંપર્ક</a>
+      </nav>
+      <div class="header-right">
+        <div class="cart-badge" onclick="toggleCart()">
+          <i class="fas fa-shopping-cart"></i>
+          <span class="cart-count" id="cartCount">0</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section id="home" class="hero">
+    <div class="container">
+      <h1>🎂 તમારી મનપસંદ કેક અને પેસ્ટ્રી</h1>
+      <p>ઘરે બેઠા ઓર્ડર કરો અને હોમ ડેલિવરી મેળવો | ૨-૩ કલાકમાં ડેલિવરી</p>
+      <button class="btn" onclick="scrollTo('menu')">
+        <i class="fas fa-shopping-bag"></i> હવે ઓર્ડર કરો
+      </button>
+      <button class="btn btn-secondary" onclick="openWhatsApp()">
+        <i class="fab fa-whatsapp"></i> WhatsApp પર જણાવો
+      </button>
+    </div>
+  </section>
+
+  <!-- Search Bar -->
+  <div style="padding: 0 15px;">
+    <div class="search-bar">
+      <input type="text" id="searchInput" placeholder="🔍 કેક, પેસ્ટ્રી, કોફી શોધો...">
+    </div>
+  </div>
+
+  <!-- Menu Section -->
+  <section id="menu" class="section">
+    <div class="container">
+      <h2 class="section-title">📋 અમારી વાનગીઓ</h2>
+      
+      <div class="category-filter" id="categoryFilter">
+        <button class="category-btn active" onclick="filterCategory('all', this)">બધા</button>
+        <button class="category-btn" onclick="filterCategory('cakes', this)">🎂 કેક્સ</button>
+        <button class="category-btn" onclick="filterCategory('pastry', this)">🥐 પેસ્ટ્રી</button>
+<button class="category-btn" onclick="filterCategory('coffee', this)">☕ કોફી</button>
+        <button class="category-btn" onclick="filterCategory('snacks', this)">🍕 સ્નેક્સ</button>
+      </div>
+
+      <div class="menu-grid" id="menuGrid">
+        <!-- Menu items will be loaded here -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="section" style="background: var(--light-bg);">
+    <div class="container">
+      <h2 class="section-title">🌟 આપણી ખાસ સુવિધાઓ</h2>
+      <div class="feature-grid">
+        <div class="feature-card">
+          <div class="feature-icon"><i class="fas fa-truck"></i></div>
+          <h3>ફ્રી ડેલિવરી</h3>
+          <p>₹૩૦૦ ઉપર ફ્રી હોમ ડેલિવરી</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon"><i class="fas fa-clock"></i></div>
+          <h3>ઝડપી ડેલિવરી</h3>
+          <p>૨-૩ કલાકમાં તમારા દરવાજે</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon"><i class="fas fa-leaf"></i></div>
+          <h3>૧૦૦% શાકાહારી</h3>
+          <p>આપણે શુદ્ધ શાકાહારી વાનગીઓ આપીએ છીએ</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon"><i class="fas fa-headset"></i></div>
+          <h3>લાઇવ ચેટ સપોર્ટ</h3>
+          <p>કોઈ પણ સમય પૂછો અને જાણો</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="section">
+    <div class="container">
+      <h2 class="section-title">📍 અમારા વિશે</h2>
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px; align-items: center;">
+        <div>
+          <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=400&auto=format&fit=crop&q=70" alt="The Bake House" style="width: 100%; border-radius: 15px; box-shadow: var(--shadow-lg);">
+        </div>
+        <div>
+          <h3 style="color: var(--primary); margin-bottom: 15px; font-size: 1.5rem;">The Bake House</h3>
+          <p style="margin-bottom: 15px;">The Bake House એ મોટા વરાછા, સુરતમાં આવેલું એક અત્યંત લોકપ્રિય અને પ્રીમિયમ કેફે છે. આપણે તાજી અને ટેસ્ટી વાનગીઓ તૈયાર કરીએ છીએ.</p>
+          
+          <h4 style="color: var(--primary); margin: 20px 0 10px 0;">📞 આપણીને સંપર્ક કરો</h4>
+          <p>
+            <strong>ફોન:</strong> <a href="tel:+918160585664" style="color: var(--accent); text-decoration: none;">+91 81605 85664</a><br>
+            <strong>વોટ્સએપ:</strong> <a href="https://wa.me/918160585664" style="color: var(--accent); text-decoration: none;">+91 81605 85664</a><br>
+            <strong>સરનામું:</strong> Mota Varachha, Surat<br>
+            <strong>સમય:</strong> ૦૯:૦૦ - ૧૧:૩૦ પ્રતિદિન
+          </p>
+        </div>
+</div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="section" style="background: linear-gradient(135deg, var(--primary) 0%, #2A1412 100%); color: var(--white); text-align: center;">
+    <div class="container">
+      <h2 class="section-title" style="color: var(--white);">📞 અમારો સંપર્ક કરો</h2>
+      <div style="font-size: 1.1rem; margin-bottom: 30px;">
+        <p><i class="fas fa-phone"></i> +91 81605 85664</p>
+        <p><i class="fab fa-whatsapp"></i> +91 81605 85664</p>
+        <p><i class="fas fa-map-marker-alt"></i> Mota Varachha, Surat</p>
+      </div>
+      <button class="btn" onclick="openWhatsApp()">
+        <i class="fab fa-whatsapp"></i> WhatsApp પર સંપર્ક કરો
+      </button>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-links">
+        <a href="#home">હોમ</a>
+        <a href="#menu">મેનુ</a>
+        <a href="#about">અમારા વિશે</a>
+        <a href="#contact">સંપર્ક</a>
+      </div>
+    
+  <div class="container">
+    <!-- Social Media Links -->
+    <div style="margin-bottom: 20px;">
+      <a href="https://www.instagram.com/thebakehouse_01?igsh=MW9iOGFnMzhzeHQ0Zg==" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 8px; color: #fff; text-decoration: none; margin: 0 15px; font-weight: bold; transition: 0.3s;">
+        <i class="fab fa-instagram" style="font-size: 1.5rem;"></i> Instagram
+      </a>
+      <a href="https://wa.me/918160585664" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 8px; color: #fff; text-decoration: none; margin: 0 15px; font-weight: bold; transition: 0.3s;">
+        <i class="fab fa-whatsapp" style="font-size: 1.5rem; color: #25D366;"></i> WhatsApp
+      </a>
+      <a href="tel:+918160585664" style="display: inline-flex; align-items: center; gap: 8px; color: #fff; text-decoration: none; margin: 0 15px; font-weight: bold; transition: 0.3s;">
+        <i class="fas fa-phone" style="font-size: 1.5rem;"></i> ફોન
+      </a>
+    </div>
+
+    <p>© 2026 THE BAKE HOUSE. તમામ હકો અધિકાર હેઠળ છે.</p>
+    <p style="font-size: 0.9rem; margin-top: 10px;">અમને Instagram પર ફોલો કરો અને નવી વાનગીઓ જાણો! 📸</p>
+  </div>
+</footer>
+
+  <!-- Cart Sidebar -->
+  <div class="cart-sidebar" id="cartSidebar">
+    <div class="cart-header">
+      <span>🛒 તમારો કાર્ટ</span>
+      <button class="close-cart" onclick="toggleCart()"><i class="fas fa-times"></i></button>
+    </div>
+    <div class="cart-items" id="cartItems">
+      <div class="cart-empty">તમારો કાર્ટ ખાલી છે</div>
+    </div>
+    <div class="cart-footer">
+      <div class="cart-total">
+        <span>કુલ:</span>
+        <span id="cartTotal">₹0</span>
+      </div>
+      <button class="checkout-btn" onclick="checkout()">
+        <i class="fas fa-credit-card"></i> પેમેન્ટ કરો
+      </button>
+    </div>
+  </div>
+
+  <!-- Checkout Modal -->
+  <div class="modal" id="checkoutModal">
+    <div class="modal-content">
+      <div class="modal-header">
+        ✓ ઓર્ડર ની માહિતી
+        <button class="modal-close" onclick="closeCheckoutModal()"><i class="fas fa-times"></i></button>
+      </div>
+      <form onsubmit="placeOrder(event)">
+        <div class="form-group">
+          <label>આપનું નામ *</label>
+          <input type="text" id="userName" required placeholder="તમારું નામ">
+        </div>
+        <div class="form-group">
+          <label>ફોન નંબર *</label>
+          <input type="tel" id="userPhone" required placeholder="10 અંકનો નંબર">
+        </div>
+        <div class="form-group">
+          <label>સરનામું *</label>
+          <textarea id="userAddress" required placeholder="તમારું ઘરનું સરનામું" rows="3"></textarea>
+        </div>
+        <div class="form-group">
+          <label>ડેલિવરી સમય *</label>
+          <select id="deliveryTime" required>
+            <option value="">પસંદ કરો</option>
+            <option value="urgent">⚡ તાત્કાલિક (આગામી ૧ કલાક)</option>
+            <option value="2hours">અગાઉ ૨ કલાક</option>
+            <option value="3hours">આગામી ૩ કલાક</option>
+            <option value="schedule">⏰ શેડ્યુલ કરો</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>વિશેષ નોંધણી</label>
+          <textarea id="specialNotes" placeholder="જો કોઈ ખાસ વિનંતી હોય તો લખો..."></textarea>
+        </div>
+        <div style="text-align: center; padding: 20px; background: var(--light-bg); border-radius: 8px; margin-bottom: 15px;">
+<div style="font-size: 1.2rem; color: var(--primary); font-weight: bold;">કુલ: <span id="orderTotal">₹0</span></div>
+          <div style="font-size: 0.9rem; color: #666; margin-top: 5px;">ડેલિવરી ફી + ₹30 (₹300 ઉપર ફ્રી)</div>
+        </div>
+        <button type="submit" class="btn btn-success" style="width: 100%; padding: 12px;">
+          <i class="fas fa-check-circle"></i> ઓર્ડર કન્ફર્મ કરો
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Script -->
+  <script>
+    // Menu Data
+    const menuItems = [
+      { id: 1, name: 'ચોકલેટ કેક', category: 'cakes', price: 450, desc: 'સ્વાદિષ્ટ ચોકલેટ કેક', image: 'https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=300&auto=format&fit=crop&q=60' },
+      { id: 2, name: 'ભ્રમર કેક', category: 'cakes', price: 380, desc: 'કોમલ અને તાજી', image: 'https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=300&auto=format&fit=crop&q=60' },
+      { id: 3, name: 'બેલ્જિયન પેસ્ટ્રી', category: 'pastry', price: 120, desc: 'પ્રિમિયમ પેસ્ટ્રી', image: 'https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=300&auto=format&fit=crop&q=60' },
+      { id: 4, name: 'ક્રોસેન્ટ', category: 'pastry', price: 80, desc: 'તાજો ક્રોસેન્ટ', image: 'https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=300&auto=format&fit=crop&q=60' },
+      { id: 5, name: 'કેપ્પુચીનો', category: 'coffee', price: 150, desc: 'ગરમ અને સ્વાદિષ્ટ', image: 'https://images.unsplash.com/photo-1495521821757-a1efb6729352?w=300&auto=format&fit=crop&q=60' },
+      { id: 6, name: 'આઈસ્ડ કોફી', category: 'coffee', price: 120, desc: 'ઠંડી અને તાજી કોફી', image: 'https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=300&auto=format&fit=crop&q=60' },
+      { id: 7, name: 'પીજા બ્રેડ', category: 'snacks', price: 200, desc: 'મજેદાર ગાર્લિક બ્રેડ', image: 'https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=300&auto=format&fit=crop&q=60' },
+      { id: 8, name: 'બર્ગર', category: 'snacks', price: 180, desc: 'સ્વાદિષ્ટ હોમમેડ બર્ગર', image: 'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=300&auto=format&fit=crop&q=60' },
+    ];
+
+    let cart = [];
+    let currentFilter = 'all';
+
+    // Initialize
+    document.addEventListener('DOMContentLoaded', () => {
+      loadCart();
+      renderMenu();
+      setupSearch();
+    });
+
+    // Render Menu
+    function renderMenu() {
+      const grid = document.getElementById('menuGrid');
+      const filtered = currentFilter === 'all' ? menuItems : menuItems.filter(item => item.category === currentFilter);
+      
+      grid.innerHTML = filtered.map(item => `
+        <div class="menu-card" data-category="${item.category}">
+          <img src="${item.image}" alt="${item.name}">
+          <div class="menu-card-body">
+            <h3>${item.name}</h3>
+            <p>${item.desc}</p>
+            <div class="menu-card-price">
+              <div class="price">₹${item.price}</div>
+            </div>
+            <div class="menu-card-actions">
+              <div class="qty-selector">
+                <button type="button" onclick="decreaseQty(this)">−</button>
+<input type="number" value="1" min="1" class="qty-input" readonly>
+                <button type="button" onclick="increaseQty(this)">+</button>
+              </div>
+              <button type="button" class="add-to-cart-btn" onclick="addToCart(${item.id}, this)">
+                <i class="fas fa-cart-plus"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    // Filter Category
+    function filterCategory(cat, btn) {
+      currentFilter = cat;
+      document.querySelectorAll('.category-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      renderMenu();
+    }
+
+    // Quantity Functions
+    function increaseQty(btn) {
+      btn.previousElementSibling.value = parseInt(btn.previousElementSibling.value) + 1;
+    }
+
+    function decreaseQty(btn) {
+      const val = parseInt(btn.nextElementSibling.value);
+      if (val > 1) btn.nextElementSibling.value = val - 1;
+    }
+
+    // Add to Cart
+    function addToCart(itemId, btn) {
+      const item = menuItems.find(m => m.id === itemId);
+      const qty = parseInt(btn.closest('.menu-card-actions').querySelector('.qty-input').value);
+      
+      const cartItem = cart.find(c => c.id === itemId);
+      if (cartItem) {
+        cartItem.qty += qty;
+      } else {
+        cart.push({ ...item, qty });
+      }
+      
+      saveCart();
+      updateCart();
+      showNotification(`✓ ${item.name} કાર્ટમાં ઉમેરવામાં આવ્યું`);
+    }
+
+    // Cart Functions
+    function toggleCart() {
+      document.getElementById('cartSidebar').classList.toggle('active');
+    }
+
+    function updateCart() {
+      const cartItems = document.getElementById('cartItems');
+      const total = document.getElementById('cartTotal');
+      const count = document.getElementById('cartCount');
+      
+      if (cart.length === 0) {
+        cartItems.innerHTML = '<div class="cart-empty">તમારો કાર્ટ ખાલી છે</div>';
+        total.textContent = '₹0';
+        count.textContent = '0';
+      } else {
+        cartItems.innerHTML = cart.map(item => `
+          <div class="cart-item">
+            <img src="${item.image}" class="cart-item-image" alt="${item.name}">
+            <div class="cart-item-info">
+              <div class="cart-item-name">${item.name}</div>
+              <div style="font-size: 0.85rem; color: #666;">Qty: ${item.qty}</div>
+              <div class="cart-item-price">₹${item.price * item.qty}</div>
+            </div>
+            <button type="button" onclick="removeFromCart(${item.id})" style="background: none; border: none; color: var(--danger); cursor: pointer; font-size: 1.2rem;">
+              <i class="fas fa-trash"></i>
+            </button>
+          </div>
+        `).join('');
+        
+        const cartTotal = cart.reduce((sum, item) => sum + (item.price * item.qty), 0);
+        total.textContent = '₹' + cartTotal;
+        count.textContent = cart.reduce((sum, item) => sum + item.qty, 0);
+      }
+    }
+
+    function removeFromCart(itemId) {
+      cart = cart.filter(item => item.id !== itemId);
+      saveCart();
+      updateCart();
+      showNotification('✓ કાર્ટમાંથી દૂર કરવામાં આવ્યું');
+    }
+
+    // Checkout
+    function checkout() {
+if (cart.length === 0) {
+        showNotification('⚠️ કાર્ટમાં કોઈ આઇટમ નથી');
+        return;
+      }
+      
+      const cartTotal = cart.reduce((sum, item) => sum + (item.price * item.qty), 0);
+      document.getElementById('orderTotal').textContent = '₹' + cartTotal;
+      document.getElementById('checkoutModal').classList.add('active');
+      toggleCart();
+    }
+
+    function closeCheckoutModal() {
+      document.getElementById('checkoutModal').classList.remove('active');
+    }
+
+    function placeOrder(e) {
+      e.preventDefault();
+      
+      const name = document.getElementById('userName').value;
+      const phone = document.getElementById('userPhone').value;
+      const address = document.getElementById('userAddress').value;
+      const deliveryTime = document.getElementById('deliveryTime').value;
+      const notes = document.getElementById('specialNotes').value;
+      
+      const orderDetails = cart.map(item => `${item.name} x${item.qty}`).join(', ');
+      const total = cart.reduce((sum, item) => sum + (item.price * item.qty), 0);
+      
+      const whatsappMsg = `🎂 નવો ઓર્ડર\n\n👤 નામ: ${name}\n📞 ફોન: ${phone}\n📍 સરનામું: ${address}\n\n📦 ઓર્ડર:\n${orderDetails}\n\n💰 કુલ: ₹${total}\n⏰ ડેલિવરી: ${deliveryTime}\n\n📝 વધુ: ${notes || 'કોઈ નથી'}`;
+      
+      window.open(`https://wa.me/918160585664?text=${encodeURIComponent(whatsappMsg)}`);
+      
+      cart = [];
+      saveCart();
+      updateCart();
+      closeCheckoutModal();
+      document.getElementById('userName').value = '';
+      document.getElementById('userPhone').value = '';
+      document.getElementById('userAddress').value = '';
+      document.getElementById('specialNotes').value = '';
+      showNotification('✓ ઓર્ડર સફલ! તમને વોટ્સએપ પર જવાબ મળશે');
+    }
+
+    // Search
+    function setupSearch() {
+      document.getElementById('searchInput').addEventListener('keyup', (e) => {
+        const query = e.target.value.toLowerCase();
+        document.querySelectorAll('.menu-card').forEach(card => {
+          const name = card.querySelector('h3').textContent.toLowerCase();
+          const desc = card.querySelector('p').textContent.toLowerCase();
+          card.style.display = (name.includes(query) || desc.includes(query)) ? 'block' : 'none';
+        });
+      });
+    }
+
+    // Utilities
+    function saveCart() {
+      localStorage.setItem('cart', JSON.stringify(cart));
+    }
+
+    function loadCart() {
+      const saved = localStorage.getItem('cart');
+      if (saved) {
+        cart = JSON.parse(saved);
+        updateCart();
+      }
+    }
+
+    function showNotification(msg) {
+      const notif = document.createElement('div');
+      notif.className = 'notification';
+      notif.textContent = msg;
+      document.body.appendChild(notif);
+      setTimeout(() => notif.remove(), 3000);
+    }
+
+    function scrollTo(id) {
+      document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+    }
+
+    function openWhatsApp() {
+      window.open('https://wa.me/918160585664?text=હેલો! મને જાણકારી જોઈએ છે');
+    }
+
+    // Mobile Menu
+    function toggleMobileMenu() {
+      document.getElementById('nav').classList.toggle('mobile-open');
+    }
+  </script>
+</body>
+</html>
